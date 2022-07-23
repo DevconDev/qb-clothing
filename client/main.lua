@@ -571,13 +571,13 @@ else
     end)
 end
 
-RegisterNetEvent('qb-clothing:client:openOutfitMenu', function()
+--[[RegisterNetEvent('qb-clothing:client:openOutfitMenu', function()
     QBCore.Functions.TriggerCallback('qb-clothing:server:getOutfits', function(result)
         openMenu({
             {menu = "myOutfits", label = "My Outfits", selected = true, outfits = result},
         })
     end)
-end)
+end)]]
 
 RegisterNUICallback('selectOutfit', function(data, cb)
     TriggerEvent('qb-clothing:client:loadOutfit', data)
